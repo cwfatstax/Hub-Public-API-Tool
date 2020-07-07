@@ -1,5 +1,5 @@
 /* INSTRUCTIONS
-1. Update the auth token
+1. Update the auth credentials in the authClientCredentials function
 2. place files to upload in /import_files
 3. ensure the data.csv is relevant to files
 4. open terminal and cd to js folder
@@ -166,11 +166,11 @@ function authClientCredentials () {
         crossDomain: true,
         method: "POST",
         dataType: "json",
-        data: { // SAKURA
+        data: { // update xxx with api credentials
             "grant_type": "password",
-            "client_id": '8631c75e30671e5386719b30840d0f12',
-            "client_secret": '57b7f6cd0e67416cd4cdb65a8e80bb3f4ea603ea204fc76273afecf4913db5b6',
-            "api_key": 'aff60ba9853384bd9a661bbd519c4c8ff6952b1baf3cf77c6b748a39d99fe151'
+            "client_id": 'xxx',
+            "client_secret": 'xxx',
+            "api_key": 'xxx'
         },
         success: function (res) {
             if (res['access_token'] !== undefined && res['refresh_token'] !== undefined) {
